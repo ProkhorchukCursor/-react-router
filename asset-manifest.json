@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.js": "/cursor-react-contacts/static/js/main.810f8db0.js",
+    "static/media/city.jpg": "/cursor-react-contacts/static/media/city.d02e82c313b1c8ff8b07.jpg",
+    "index.html": "/cursor-react-contacts/index.html",
+    "main.810f8db0.js.map": "/cursor-react-contacts/static/js/main.810f8db0.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.810f8db0.js"
+  ]
+}
