@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Box, Container } from "@mui/material";
 
 import { Post } from "../../components";
