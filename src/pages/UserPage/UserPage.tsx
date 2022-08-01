@@ -1,9 +1,10 @@
-import { Box, Container } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import { useParams } from "react-router-dom";
 
 const UserPage = () => {
-const id = useParams();
-console.log(id);
+ const { id } = useParams();
+
+ const nameArr = id?.split("-");
 
  return (
   <Container>
@@ -15,7 +16,8 @@ console.log(id);
      alignItems: "center",
     }}
    >
-    User
+    <Typography>{nameArr && nameArr[0]}</Typography>
+    <Typography>{nameArr && nameArr[1]}</Typography>
    </Box>
   </Container>
  );
