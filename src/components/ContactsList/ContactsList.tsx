@@ -7,6 +7,7 @@ import { CONTACTS } from "../../constants";
 
 import { IContact } from "../../types";
 import { Box, Grid, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 interface IProps {
  search: string;
@@ -54,8 +55,6 @@ const ContactsList = ({
  filterNoGender,
 }: IProps) => {
  const [contacts, setContacts] = useState<IContact[]>([]);
-
- //  getGenderFiltered(CONTACTS, filterMale, filterFemale, filterNoGender);
 
  const debouncedSearch = debounce((value: string) => {
   const filteredValue = value.toLocaleLowerCase().trim();
@@ -105,17 +104,24 @@ const ContactsList = ({
        md={4}
        key={`${contact.firstName} ${contact.lastName}-${contact.phone}`}
       >
-       <Contact
-        firstName={contact.firstName}
-        lastName={contact.lastName}
-        phone={contact.phone}
-        gender={contact.gender}
-       />
+       <Link
+        to={`/contacts/${contact.firstName}-${contact.lastName}`}
+        style={{ textDecoration: "none", color: "inherit" }}
+       >
+        <Contact
+         firstName={contact.firstName}
+         lastName={contact.lastName}
+         phone={contact.phone}
+         gender={contact.gender}
+        />
+       </Link>
       </Grid>
      ))}
     </Grid>
    ) : (
-    <Typography sx={{textAlign: "center"}} variant="h2" color="#348feb">Sorry, contacts not found</Typography>
+    <Typography sx={{ textAlign: "center" }} variant="h2" color="#348feb">
+     Sorry, contacts not found
+    </Typography>
    )}
   </Box>
  );
