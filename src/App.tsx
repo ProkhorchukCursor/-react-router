@@ -1,4 +1,4 @@
-import { Route, HashRouter } from "react-router-dom";
+import { Route, HashRouter, Routes } from "react-router-dom";
 
 import { Container } from "@mui/material";
 
@@ -16,12 +16,14 @@ function App() {
  return (
   <Container>
    <HashRouter>
-   <Header />
-    <Route path="/" element={<HomePage />} />
-    <Route path="/posts" element={<PostsPage />} />
-    <Route path="/photos" element={<PhotosPage />} />
-    <Route path="/contacts" element={<ContactsPage />} />
-    <Route path="/contacts/:id" element={<UserPage />} />
+    <Header />
+    <Routes>
+     <Route path="/" element={<HomePage />} />
+     <Route path="/posts" element={<PostsPage />} />
+     <Route path="/photos" element={<PhotosPage />} />
+     <Route path="/contacts" element={<ContactsPage />} />
+     <Route path="/contacts/:id" element={<UserPage />} />
+    </Routes>
    </HashRouter>
   </Container>
  );
