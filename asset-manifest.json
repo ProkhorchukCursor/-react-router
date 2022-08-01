@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/cursor-react-contacts/static/js/main.9bb32236.js",
+    "main.js": "/cursor-react-contacts/static/js/main.2d675423.js",
     "static/media/city.jpg": "/cursor-react-contacts/static/media/city.d02e82c313b1c8ff8b07.jpg",
     "index.html": "/cursor-react-contacts/index.html",
-    "main.9bb32236.js.map": "/cursor-react-contacts/static/js/main.9bb32236.js.map"
+    "main.2d675423.js.map": "/cursor-react-contacts/static/js/main.2d675423.js.map"
   },
   "entrypoints": [
-    "static/js/main.9bb32236.js"
+    "static/js/main.2d675423.js"
   ]
 }
